@@ -8,19 +8,22 @@ These are named `lecture_XX.py`.
 
 ### Setup
 
+        git clone https://github.com/stanford-cs336/lectures.git
+        cd CS336
         uv sync
         git clone https://github.com/percyliang/edtrace
+        npm install --prefix=edtrace/frontend
 
 You can compile a lecture by running:
 
-        python execute.py -m lecture_01
+        python -m edtrace.execute -m lecture_01
 
 which generates a `var/traces/lecture_01.json` and caches any images as
 appropriate.
 
 To view it locally:
 
-Load a local server to view at `http://localhost:5173?trace=var/traces/sample.json`:
+Load a local server to view at `http://localhost:5173?trace=var/traces/lecture_01.json`:
 
         npm run --prefix=edtrace/frontend dev
 
